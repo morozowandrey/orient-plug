@@ -1,0 +1,112 @@
+@import '../styles/media-mixins.scss';
+
+.underline {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+  }
+}
+
+.home {
+  padding: 48px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(812) {
+    height: 100vh;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  @include media-breakpoint-down(768) {
+    padding: 48px 24px;
+  }
+
+  &-info {
+    max-width: 694px;
+    margin-right: 40px;
+
+    font-family: SangBleu Versailles Trial;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 38px;
+
+    @include media-breakpoint-down(812) {
+      margin-right: 0;
+    }
+
+    &__title {
+      margin: 0;
+      display: inline-block;
+
+      font-family: SangBleu Versailles Trial;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 38px;
+
+      @include media-breakpoint-down(576) {
+        display: block;
+      }
+    }
+
+    &__part {
+      @include media-breakpoint-down(576) {
+        display: block;
+      }
+    }
+
+    &__link {
+      margin: 0;
+      color: #000;
+    }
+  }
+
+  &-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 400px;
+    min-width: 400px;
+    padding: 16px 32px;
+    border-radius: 40px;
+    background: #000;
+
+    @include media-breakpoint-down(576) {
+      width: 327px;
+      min-width: 327px;
+    }
+
+    &__title {
+      margin: 0;
+      font-family: SangBleu Versailles Trial;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 24px;
+      color: #fff;
+    }
+
+    &__info {
+      margin: 0;
+      font-family: DMSans-Regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
+}

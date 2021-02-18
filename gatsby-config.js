@@ -1,12 +1,13 @@
 module.exports = {
+  flags: {
+    DEV_SSR: false,
+  },
+  siteMetadata: {
+    title: `Chornobyl`,
+  },
   plugins: [
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: 'G-2L909QVF40',
-    //     head: true,
-    //   },
-    // },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
