@@ -42,7 +42,11 @@ export default function Index() {
             >
               Andrey Morozow
             </a>{' '}
-            that specialises in design and code
+            that{' '}
+            <span className="divider">
+              <br />
+            </span>{' '}
+            specialises in design and code
           </span>
         </div>
         <div className="home-badge">
