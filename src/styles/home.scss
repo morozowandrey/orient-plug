@@ -27,16 +27,15 @@
   }
 
   @include media-breakpoint-down(576) {
-    // height: calc(100vh - 112px);
     flex-direction: column-reverse;
     align-items: flex-start;
   }
 
-  @media screen and (min-height: 500px) {
-    height: calc(100vh - 72px);
+  @media (max-width: 576px) and (min-height: 500px) {
+    height: calc(100vh - 78px);
   }
 
-  @media screen and (min-height: 600px) {
+  @media (max-width: 576px) and (min-height: 600px) {
     height: calc(100vh - 108px);
   }
 
