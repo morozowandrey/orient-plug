@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 import favicon16 from '../images/favicon16.png'
 import favicon32 from '../images/favicon32.png'
@@ -28,6 +29,13 @@ export default function Index() {
           <span className="home-info__part">
             of{' '}
             <a
+              onClick={(e) => {
+                trackCustomEvent({
+                  category: 'Anna link',
+                  action: 'Click',
+                  label: 'Anna link click',
+                })
+              }}
               href="https://annayushch.com/"
               target="_blank"
               className="home-info__link"
@@ -36,6 +44,13 @@ export default function Index() {
             </a>{' '}
             and{' '}
             <a
+              onClick={(e) => {
+                trackCustomEvent({
+                  category: 'Andrew link',
+                  action: 'Click',
+                  label: 'Anna link click',
+                })
+              }}
               href="https://www.facebook.com/morozow.power"
               target="_blank"
               className="home-info__link"
