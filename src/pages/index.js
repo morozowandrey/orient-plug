@@ -61,7 +61,7 @@ export default function Index() {
             <span className="divider">
               <br />
             </span>{' '}
-            specialises in design and code
+            specializes in design and code
           </span>
         </div>
         <div className="home-badge">
